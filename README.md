@@ -239,6 +239,6 @@ This project demonstrates how AI technologies like RAG, NLP, and computer vision
 Punith
 Punya Shree G
 Poornima V
-Pihu ojha
+Pihu Ojha
 AI Civic Technology Project
 
