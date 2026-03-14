@@ -1,0 +1,16 @@
+project_id = "byxcwjaubsofnhxdtwyi"
+
+[functions.analyze-issue]
+verify_jwt = false
+
+[functions.civic-assistant]
+verify_jwt = false
+
+[functions.send-sms]
+verify_jwt = false
+
+[functions.notify-department-sms]
+verify_jwt = false
+
+[functions.analyze-complaint-text]
+verify_jwt = false

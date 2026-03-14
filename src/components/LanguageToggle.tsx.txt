@@ -1,0 +1,18 @@
+import { Globe } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
+
+const LanguageToggle = () => {
+  const { i18n } = useTranslation();
+  const toggleLanguage = () => {
+    i18n.changeLanguage(i18n.language === "en" ? "hi" : "en");
+  };
+
+  return (
+    <Button variant="ghost" size="icon" onClick={toggleLanguage} className="w-9 h-9">
+      <Globe className="w-4 h-4" />
+    </Button>
+  );
+};
+
+export default LanguageToggle;
