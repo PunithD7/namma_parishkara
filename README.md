@@ -337,7 +337,7 @@ Add screenshots here:
 
 ### Landing Page
 
-![Landing](screenshots/landing.png)
+![Landing](landing.png)
 
 ### User Dashboard
 
