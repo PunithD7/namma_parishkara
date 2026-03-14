@@ -1,190 +1,311 @@
-# Namma Parishkara AI
+# 🚀 Namma Parishkara AI
 
-### AI-Powered Civic Issue Detection & Complaint System
+### Smart Civic Issue Detection & Complaint Automation Platform
 
-## Overview
-
-**Namma Parishkara AI** is an intelligent civic complaint system designed to help citizens report infrastructure issues such as potholes, garbage overflow, drainage blockages, and streetlight failures.
-
-The system uses:
-
-* Retrieval-Augmented Generation (RAG)
-* Natural Language Processing (NLP)
-* Computer Vision (Image Detection)
-* Civic Policy Knowledge Base
-
-The goal is to automatically analyze issues, generate complaints, and assist municipal departments in faster resolution.
+![AI](https://img.shields.io/badge/AI-RAG%20%2B%20Computer%20Vision-blue)
+![Python](https://img.shields.io/badge/Python-Backend-yellow)
+![React](https://img.shields.io/badge/Frontend-React%20%2B%20Vite-blue)
+![YOLO](https://img.shields.io/badge/Object%20Detection-YOLOv8-green)
+![License](https://img.shields.io/badge/Open%20Source-Hackathon-orange)
 
 ---
 
-# System Architecture
+# 🌍 Overview
 
-User Input → AI Processing → Civic Database → Complaint Generation → Department Action
+**Namma Parishkara AI** is an intelligent civic infrastructure monitoring system that allows citizens to report city issues like:
 
-Modules:
+* 🕳️ Potholes
+* 🗑️ Garbage overflow
+* 🌧 Drain blockage
+* 💡 Streetlight failure
+* 🚦 Traffic signal issues
 
-1. Chatbot Interface
-2. Image Detection System
-3. RAG Knowledge Retrieval
-4. NLP Complaint Generator
-5. Civic Policy Database
-6. Dashboard & Reporting
+The system uses **Artificial Intelligence, Computer Vision, and Retrieval-Augmented Generation (RAG)** to:
 
----
+✔ Detect civic issues from images
+✔ Analyze severity using AI
+✔ Retrieve municipal policies
+✔ Generate structured complaints automatically
 
-# Core Technologies
-
-Python – Backend processing
-Streamlit – ChatGPT-style UI
-Ollama – Local LLM runtime
-LangChain – RAG orchestration
-ChromaDB – Vector database
-OpenCV – Image analysis
+The project demonstrates how **AI can improve Smart City governance.**
 
 ---
 
-# What is RAG (Retrieval-Augmented Generation)?
+# 🧠 Core AI Technologies
 
-RAG combines:
+| Technology      | Purpose                                 |
+| --------------- | --------------------------------------- |
+| RAG             | Knowledge retrieval from civic policies |
+| NLP             | Understand citizen complaints           |
+| YOLOv8          | Detect potholes from images             |
+| Vector Database | Store policy embeddings                 |
+| Local LLM       | Generate civic responses                |
 
-Knowledge Retrieval + Large Language Models
+The AI chatbot is powered using:
 
-Instead of relying only on the model's training data, the system retrieves relevant documents from a local knowledge base and feeds them to the LLM.
-
-Steps:
-
-1. Documents are stored in the docs folder.
-2. Documents are converted into embeddings.
-3. Embeddings are stored in a vector database.
-4. When a user asks a question, the system retrieves the most relevant documents.
-5. The LLM generates a response using the retrieved context.
-
-This ensures:
-
-* Accurate responses
-* Local knowledge usage
-* Offline capability
-* Reduced hallucination
+**Ollama**
 
 ---
 
-# NLP Module
+# 🏗 System Architecture
 
-The Natural Language Processing module processes citizen complaints.
-
-Capabilities:
-
-* Text understanding
-* Intent detection
-* Issue classification
-* Complaint generation
-* Department routing
-
-Example:
-
-User Input:
-"There is a huge pothole near MG Road causing accidents."
-
-NLP Output:
-Issue Type → Road Damage
-Department → BBMP Roads
-Severity → High
-Suggested Action → Immediate repair within 24 hours
+```
+Citizen
+   │
+   ▼
+Frontend Web App
+   │
+   ▼
+Backend API (Python)
+   │
+   ├── Image Detection (YOLOv8)
+   │
+   ├── RAG Engine
+   │      │
+   │      ├─ Civic Policy Docs
+   │      └─ Vector Database
+   │
+   ▼
+AI Complaint Generator
+   │
+   ▼
+Municipal Department System
+```
 
 ---
 
-# Image Detection Module
+# 🤖 RAG Pipeline
 
-Citizens can upload images of civic issues.
+The **Retrieval Augmented Generation system** allows the AI to answer civic questions using local policy documents.
 
-The system analyzes images using computer vision to detect:
+```
+User Question
+     │
+     ▼
+Embedding Model
+     │
+     ▼
+Vector Search
+     │
+     ▼
+Retrieve Relevant Civic Policies
+     │
+     ▼
+LLM Response Generation
+     │
+     ▼
+Final AI Answer
+```
 
-* Potholes
-* Garbage piles
-* Broken roads
-* Drain blockages
+Benefits:
 
-Image Processing Flow:
+✔ Accurate answers
+✔ Uses municipal knowledge
+✔ Works offline
+✔ Prevents hallucinations
 
-Upload Image → Preprocessing → Detection Model → Severity Analysis → Complaint Generation
+---
 
-Output Example:
+# 📸 Image Detection System
 
-Issue Detected: Pothole
+The platform detects potholes using a trained **YOLOv8 model**.
+
+Detection Flow:
+
+```
+User Upload Image
+      │
+      ▼
+Image Preprocessing
+      │
+      ▼
+YOLOv8 Detection
+      │
+      ▼
+Severity Analysis
+      │
+      ▼
+Auto Complaint Generation
+```
+
+Example Output:
+
+```
+Detected Issue: Pothole
 Severity: High
-Suggested Department: BBMP Roads
+Department: Road Maintenance
+Action: Repair within 24 hours
+```
 
 ---
 
-# Civic Policy Knowledge Base
+# 💻 Frontend Application
 
-The system uses a large civic policy dataset stored as documents or CSV.
+The frontend provides a modern civic portal for citizens.
 
-These documents contain:
+Features:
 
-* Municipal regulations
-* Repair timelines
-* Department responsibilities
-* Infrastructure guidelines
+✔ Landing Page
+✔ User Login
+✔ Admin Login
+✔ Complaint Dashboard
+✔ AI Chatbot Interface
+✔ Image Upload System
 
-Example Knowledge Query:
+Frontend stack:
 
-User:
-"What happens if pothole is severe?"
+* React
+* Vite
+* TailwindCSS
+* Supabase integration
 
-AI Response:
-According to BBMP Road Pothole Repair Policy, high severity potholes must be repaired within 24 hours.
+Project structure:
+
+```
+frontend/
+
+public/
+src/
+supabase/
+
+index.html
+tailwind.config.ts
+vite.config.ts
+package.json
+```
 
 ---
 
-# Folder Structure
+# ⚙ Backend System
 
-project_root/
+The backend processes:
+
+* AI inference
+* Image detection
+* RAG retrieval
+* Complaint generation
+
+Backend stack:
+
+Python
+Computer Vision
+Vector Search
+
+Project structure:
+
+```
+backend/
+
+dataset/
+docs/
+images/
+runs/
 
 app.py
-rag_engine.py
-image_detector.py
-
-docs/
-Civic policy documents used for RAG training
-
-images/
-Pothole training dataset
-
-database/
-CSV civic policies and complaint records
-
-models/
-Detection models
-
-README.md
+rag_model.py
+pothole_detector.py
+run_pipeline.py
+dataset.yaml
+generate_dataset.py
+generate_docs.py
+requirements.txt
+```
 
 ---
 
-# Running the System
+# 📂 Full Project Structure
 
-Step 1: Install dependencies
+```
+namma-parishkara-ai
 
-pip install streamlit langchain chromadb ollama opencv-python
+frontend/
+│
+├── public/
+├── src/
+├── supabase/
+├── index.html
+├── package.json
+└── vite.config.ts
 
-Step 2: Start the LLM
+backend/
+│
+├── dataset/
+├── docs/
+├── images/
+├── runs/
+├── app.py
+├── rag_model.py
+├── pothole_detector.py
+├── run_pipeline.py
+└── requirements.txt
+```
 
+---
+
+# ⚙ Installation Guide
+
+## 1️⃣ Clone the Repository
+
+```
+git clone https://github.com/yourusername/namma-parishkara-ai
+cd namma-parishkara-ai
+```
+
+---
+
+# Frontend Setup
+
+Install dependencies
+
+```
+npm install
+```
+
+Run development server
+
+```
+npm run dev
+```
+
+---
+
+# Backend Setup
+
+Install Python dependencies
+
+```
+pip install -r requirements.txt
+```
+
+---
+
+# Start Local AI Model
+
+Install and run
+
+**Ollama**
+
+```
+ollama pull mistral
 ollama run mistral
-
-Step 3: Run the application
-
-streamlit run app.py
+```
 
 ---
 
-# Example Features
+# Run Backend
 
-ChatGPT-style civic chatbot
-Drag-and-drop pothole image upload
-AI severity detection
-Complaint auto-generation
-Map location tagging
-Offline operation
+```
+python app.py
+```
+
+---
+
+# Train Pothole Detection Model
+
+```
+python generate_dataset.py
+yolo detect train data=dataset.yaml model=yolov8n.pt epochs=50
+```
 
 ---
 
@@ -198,47 +319,70 @@ AI detects pothole severity
 
 ↓
 
-RAG retrieves civic repair policy
+RAG retrieves municipal policy
 
 ↓
 
-System generates complaint
+Complaint automatically generated
 
 ↓
 
-Complaint assigned to department
+Admin dashboard tracks issue
 
 ---
 
-# Benefits
+# 🖼 Project Screenshots
 
-Faster complaint resolution
-AI-assisted infrastructure monitoring
-Reduced manual reporting
-Improved civic transparency
+Add screenshots here:
 
----
+### Landing Page
 
-# Future Improvements
+![Landing](screenshots/landing.png)
 
-Live CCTV monitoring
-Mobile app integration
-Automatic geolocation detection
-Integration with smart city APIs
+### User Dashboard
 
----
+![Dashboard](screenshots/dashboard.png)
 
-# Project Purpose
+### Admin Panel
 
-This project demonstrates how AI technologies like RAG, NLP, and computer vision can improve public infrastructure management and enable smarter cities.
+![Admin](screenshots/admin.png)
+
+### AI Chatbot
+
+![Chatbot](screenshots/chatbot.png)
 
 ---
 
-# Author
+# 🚀 Future Improvements
+
+* Mobile application
+* Live CCTV monitoring
+* GPS based complaint tagging
+* Smart city IoT integration
+* Predictive infrastructure repair
+
+---
+
+# 🏆 Hackathon Impact
+
+This project demonstrates how **AI can modernize civic governance** by enabling:
+
+* Automated infrastructure monitoring
+* Faster complaint resolution
+* AI-assisted municipal management
+* Smart city analytics
+
+---
+
+# 👨‍💻 Author
 
 Punith
-Punya Shree G
 Poornima V
 Pihu Ojha
-AI Civic Technology Project
+PunyaShree G
+
+---
+
+⭐ If you like this project, consider starring the repository!
+
 
