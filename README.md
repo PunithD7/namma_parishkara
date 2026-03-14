@@ -341,15 +341,15 @@ Add screenshots here:
 
 ### User Dashboard
 
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](dashboard.png)
 
 ### Admin Panel
 
-![Admin](screenshots/admin.png)
+![Admin](admin.png)
 
 ### AI Chatbot
 
-![Chatbot](screenshots/chatbot.png)
+![Chatbot](chatbot.png)
 
 ---
 
