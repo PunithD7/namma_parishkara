@@ -101,7 +101,7 @@ const Landing = () => {
       {/* Hero Section with Background Video */}
       <section className="relative overflow-hidden min-h-[90vh] flex flex-col">
         <video autoPlay loop muted playsInline className="absolute top-0 left-0 w-full h-full object-cover">
-          <source src="background.mp4" type="video/mp4" />
+          <source src="/background.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-foreground/70" />
         <div className="absolute inset-0">
